@@ -1,0 +1,56 @@
+// ---------------- SWITCH ----------------------
+.switch {
+    background: #343d5b;
+    border-radius: 1000px;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    outline: none;
+    margin: 30px;
+    &::after {
+        content: "";
+        display: block;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        background: #f1f1f1;
+        top: 0;
+        left: 0;
+        right: unset;
+        border-radius: 100px;
+        transition: .3s ease all;
+        box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, .2);
+    }
+    &.active {
+        background: orange;
+        color: #000;
+        &::after {
+            right: 0;
+            left: unset;
+        }
+    }
+    span {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        display: block;
+        background: none;
+        color: #fff;
+    }
+}
+
+body {
+    transition: .3s ease all;
+    &.dark {
+        background: linear-gradient(135deg, #213ED7 0%, #000000 99.99%, #69EB8A 100%, #42F870 100%);
+        color: white;
+        h1,
+        p {
+            color: white;
+        }
+        .comentario-1 h3 {
+            color: white;
+        }
+    }
+}
